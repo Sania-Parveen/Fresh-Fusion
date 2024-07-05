@@ -1,0 +1,715 @@
+
+html{
+    font-size:62.25%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* ############# utility class ##############3 */
+
+.container{
+    max-width: 1200px;
+    width:90%;
+    margin:auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1em 2.5em;
+    margin-top:1em;
+    text-decoration:none;
+    cursor:pointer;
+    border-radius:50px;
+    outline:none;
+    text-transform:uppercase;
+    font-weight: 500;
+}
+ .btn-primary{
+    color:#fff;
+    background: #16a083;
+ }
+
+/* ####################### navbar  styling ########### */
+
+  
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    opacity: 0.95;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+  }
+  
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: none;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-items li {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ff6b6b;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+      display: block;
+    }
+  
+    .navbar-container .hamburger-lines {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 32px;
+      height: 24px;
+      cursor: pointer;
+    }
+  
+    .navbar-container .hamburger-lines .line {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+  
+    .navbar-container .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar-container .hamburger-lines .line2 {
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar-container .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar .menu-items {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: #fff;
+      padding: 20px;
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0;
+    }
+  
+    .navbar .menu-items li {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+      display: flex;
+    }
+  }
+  
+
+  
+/* ################# showcase styling  ############# */
+
+.showcase-area {
+    position: relative;
+  }
+  
+  .showcase-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 100px;
+    color: #fafcfa;
+  }
+  
+  .main-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color : #eb6969
+  }
+  
+  .showcase-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .showcase-container .btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+  
+  .showcase-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("img/main.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+    
+    /*  ################### about  styling ############### */
+
+    #about{
+        padding:50px 0px;
+        background:#f5f5f5;
+        box-shadow: #f0eaea;
+        height:40%;
+    }
+
+    .about-wrapper{
+        display:flex;
+        flex-wrap: wrap; 
+    }
+
+    #about h2{
+        font-size: 3.2rem;
+    }
+    #about p{
+        font-size: 1.6rem;
+        color:#555;
+    }
+
+    #about .class{
+        font-size: 1.6rem;
+        color:#666;
+        font-weight: 600;
+    }
+    .about-image{
+        flex:1 1 400px;
+        padding:30px;
+        transform:translatex(150%);
+        animation:about-img-animation 1s ease-in-out forwards; 
+        
+    }
+
+    @keyframes about-img-animation{
+        100%{ transform:translate(0);}
+    }
+
+    .about-text{
+        flex:1 1 400px;
+        padding:30px;
+        margin:auto;
+        transform:translatex(-150%);
+        animation:about-text-animation 1s ease-in-out forwards; 
+
+    }
+    @keyframes about-text-animation{
+        100%{ transform:translate(0);}
+    }
+
+    .about-image img{
+        display:block;
+        height:400px;
+        max-width:100%;
+        margin:auto;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    /* ######################### food category styling ############ */
+
+#food h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #ff6b6b; 
+}
+
+    #food{
+        padding:5rem 0 10rem 0
+    }
+    
+
+    .food-container{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .food-container img{
+        display:block;
+        width:100%;
+        margin:auto;
+        max-height: 300px;
+        object-fit:cover;
+        object-position: center;
+    }
+
+    .img-container{
+        margin:0 1rem;
+        position:relative;
+    }
+    .img-content{
+        position:absolute;
+        top:70%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        opacity:0 ;
+        z-index:1;
+        text-align: center;
+        transition:all 0.3s ease-in-out 0.1s;
+
+
+
+    }
+
+    .img-content h3{ color:#fff; font-size:3rem;}
+    .img-content a{ font-size:1.2rem;}
+
+    .img-container::after{ 
+        content:"";
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(152, 148, 148, 0.871);
+        opacity:0;
+        z-index:1.5;
+        transform :scaleY(0);
+        transform-origin:100% 100% ;
+        transition:all 0.3 ease-in-out;
+    
+    }
+
+    .img-container:hover::after{
+        opacity:1;
+        transform:scaley(1); 
+    }
+
+    .img-container:hover .img-content{
+        opacity:1;
+        top:40%;
+    }
+
+/*############### food menu styling ################## */
+
+.food-menu-heading {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 400;
+  color: #fd5f5f; 
+  margin-bottom: 30px;
+}
+
+  
+  .food-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .food-menu-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .food-menu-item {
+    flex: 1 1 300px;
+    padding: 30px;
+    margin: 10px; /* Added margin for spacing */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .food-menu-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .food-menu-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    clip-path: circle(50%); /* Added clip-path for circular shape */
+  }
+  
+  .food-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .food-description .food-price {
+    color: #117964;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .food-description p {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+     /* ##################  testimonial styling ############### */
+
+   #testimonial{ 
+     padding:5rem 0rem;
+     background:rgba(243,243,243);
+    }
+    .testimonial-title{ 
+      text-align: center;
+      color:#555;
+      font-size:3rem;
+      font-weight:400;
+    }
+    .testimonial-container{ 
+      display:flex;
+      justify-content:space-between;
+      font-size:1.6rem;padding:1rem;
+    }
+.testimonial-box .checked {
+  color: #ff9529;
+}
+
+.testimonial-box .testimonial-text {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.testimonial-box {
+  text-align: center; 
+}
+
+.customer-photo img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+      /*  ################### reservation styling ############### */
+
+#reservation {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  background-image: url('img/rest.jpg'); /* the background image path */
+  background-size: cover;
+  background-position: center;
+  color: #fff; 
+  text-align: center;
+}
+
+.reservation-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#reservation-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #880c03; /* heading color */
+  margin-bottom: 30px;
+}
+
+#reservation-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  flex: 1 1 100%;
+  padding: 10px;
+}
+
+#reservation-form input,
+#reservation-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #c5c5c5;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+#reservation-form textarea {
+  resize: vertical;
+}
+
+#reservation-form button {
+  padding: 10px 20px;
+  background-color: #ff6b6b; /* button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reservation-form button:hover {
+  background-color: #ff4f4f;
+}
+
+/* Add vibrant colors for form elements */
+#reservation-form input[type="text"]:focus,
+#reservation-form input[type="email"]:focus,
+#reservation-form input[type="date"]:focus,
+#reservation-form input[type="time"]:focus,
+#reservation-form input[type="number"]:focus,
+#reservation-form textarea:focus {
+  border-color: #ff6b6b;
+}
+
+/* Added custom placeholder styles */
+#reservation-form ::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/* Added custom focus styles for placeholder */
+#reservation-form input[type="text"]:focus::placeholder,
+#reservation-form input[type="email"]:focus::placeholder,
+#reservation-form input[type="date"]:focus::placeholder,
+#reservation-form input[type="time"]:focus::placeholder,
+#reservation-form input[type="number"]:focus::placeholder,
+#reservation-form textarea:focus::placeholder {
+  color: #bbb;
+}
+
+
+
+
+   /* ######################### footer styling ######################## */
+ 
+ 
+    body, h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    #footer {
+      background-color: #222;
+      height: 1in;
+      padding: 10px 0;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .footer-column {
+      flex: 1;
+      max-width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .footer-text h2 {
+      font-size: 1.5rem; /* font size */
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    
+    .footer-text p {
+      font-size: 0.9rem; 
+      margin-bottom: 3px;
+      color: #aaa;
+    }
+    
+    .footer-social {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .footer-social a {
+      margin: 0 5px;
+      font-size: 1rem; 
+      color: #aaa;
+    }
+    
+    .column {
+      font-size: 1.2rem; 
+      margin-bottom: 15px; /* Adjusted margin to create some separation */
+      color: #fff;
+    }
+    
+    /* All rights reserved section styling */
+    .footer-bottom {
+      background-color: white; 
+      text-align: center;
+      padding: 10px 0;
+    }
+    
+    .footer-bottom p {
+      font-size: 1rem; 
+      color: #aaa;
+      margin-bottom: 0;
+    }
+    
+    .footer-bottom p a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    
+    .footer-bottom p a:hover {
+      color: #fff;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+
+    /* ################### meadia querry ############### */
+
+@media(max-width:768px){
+    .navbar{opacity:0.95;}
+    .navbar-container input[type='checkbox'],
+    .navbar-container .hamburger-lines{
+        display:block;
+    }
+    .navbar-container{ 
+        display:block;
+        position:relative;
+        height:64px;
+    }
+    .navbar-container input[type='checkbox']{
+        position:absolute;
+        display:block;
+        height:32px;
+        width:40px;
+        top:20px;
+        left:20px;
+        z-index:5;
+        opacity:0;
+    }
+    .navbar-container hamburger-lines{
+        display:block;
+        height:40px;
+        width:32px;
+        position:absolute;
+        top:20px;
+        left:20px;
+        z-index: 2;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+    .navbar-container .hamburger-lines .line{
+        display:block;
+        height:4px;
+        width:100%;
+        background: #333;
+        border-radius:10px;
+    
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition:transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{
+    
+        transition:tranform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition:transform 0.4s ease-in-out;
+    }
+    .navbar .menu-items{
+        padding-top:100px;
+        background: #fff;
+        height:100vh;
+        max-width:300px;
+        transform: translate(-150%);
+        display:flex;
+        flex-direction: column;
+        margin-left:-40px;
+        padding-left: 50px;
+        transition:transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+    .navbar .menu-items li{
+        margin-bottom:3rem;
+        font-size:2rem;
+        font-weight: 500;
+    }
+    .logo{
+        position:absolute;
+        top:10px;
+        right:15px;
+        font-size:2rem;
+    }
+    .navbar-container input[type='checkbox']:checked~ .menu-items{
+        transform:translateX(0);
+    }
+}
+
+
+
+
+
+
+

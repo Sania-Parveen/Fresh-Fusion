@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRESH FUSION CAFE</title> 
+  
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+ 
+</head>
+
+    <!-- #################### for NAVIGATION #############-->
+
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <input type="checkbox" name="id">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="menu-items">
+        <li><a href="index.html#showcase" >Home</a></li>
+        <li><a href="index.html#about" >About</a></li>
+        <li><a href="index.html#food"  >Category</a></li>
+        <li><a href="index.html#food-menu"  >Menu</a></li>
+        <li><a href="index.html#testimonial"  >Testimonial</a></li>
+        <li><a href="index.html#reservation"  >Reservation</a></li>
+      </ul>
+      <h1 class="logo">FFC</h1>
+    </div>
+  </nav>
+  
+    <main>
+      <section id="order" class="container">
+        <h2 class="main-title">ORDER NOW</h2>
+        <p>Place your order now and enjoy our delicious dishes!</p>
+        <form action="#" method="post" class="order-form" id="order-form">
+          <div class="form-group">
+            <label for="product">Product</label>
+            <input type="text" id="product" name="product" placeholder="Enter the product name" required>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter the quantity" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="4" placeholder="Your Address" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="delivery">Delivery Preference</label>
+            <select id="delivery" name="delivery" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="delivery">Delivery</option>
+              <option value="pickup">Pickup</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required>
+              <option value="" disabled selected>Select a payment method</option>
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="cash">Cash on Delivery/Pickup</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Order</button>
+        </form>
+      </section>
+      
+    </main>
+
+        <!-- #################### for FOOTER #############-->
+
+    <footer id="footer">
+      <div class="footer-column">
+        <div class="footer-text">
+          <h2>FRESH FUSION CAFE</h2>
+          <p>23,Connaught Place New Delhi - 110001 India</p>
+          <p>Phone: 931-290-4321</p>
+          <p>Email: freshfusion@gmail.com</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <div class="column">
+          <h3>MASTER CHEFS</h3>
+          <ul>
+            <li>John Smith</li>
+            <li>Emily Johnson</li>
+            <li>Michael Davis</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column">
+        <div class="column">
+          <h3>SERVICES &amp; OFFERS</h3>
+          <ul>
+            <li>Private Dining</li>
+            <li>Catering Services</li>
+            <li>Happy Hour Specials</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2023 Restaurant Website. All rights reserved.</p>
+    </div>                   
+    
+    <!-- script for smooth scrolling -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+
+</body>
+
+</html>
